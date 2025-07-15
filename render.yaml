@@ -1,0 +1,29 @@
+services:
+  - type: web
+    name: n8n
+    env: docker
+    plan: starter
+    region: oregon
+    envVars:
+      - key: DB_TYPE
+        value: postgresdb
+      - key: DB_POSTGRESDB_HOST
+        value: your-db-host.render.com
+      - key: DB_POSTGRESDB_PORT
+        value: 5432
+      - key: DB_POSTGRESDB_DATABASE
+        value: yourdbname
+      - key: DB_POSTGRESDB_USER
+        value: yourusername
+      - key: DB_POSTGRESDB_PASSWORD
+        value: yourpassword
+      - key: N8N_HOST
+        value: your-subdomain.onrender.com
+      - key: N8N_PORT
+        value: 5678
+      - key: N8N_PROTOCOL
+        value: https
+      - key: WEBHOOK_TUNNEL_URL
+        value: https://your-subdomain.onrender.com
+      - key: GENERIC_TIMEZONE
+        value: Europe/Dubai
